@@ -33,6 +33,9 @@ public class PlayerMovement : MonoBehaviour
     public ParticleSystem circle;
     public ParticleSystem barrel;
     public ParticleSystem stars;
+    
+    public GameObject BulletPrefab;
+    public GameObject BulletHolder;
 
     void Start()
     {
@@ -67,7 +70,15 @@ public class PlayerMovement : MonoBehaviour
             QuickSpin(dir);
         }
 
-
+        if (Input.GetButtonDown("Fire1"))
+        {
+            var bullet = GameObject.Instantiate(BulletPrefab, BulletHolder.transform, false);
+            var bulletRigidBody = bullet.GetComponent<Rigidbody>();
+            var playerPos = playerModel.transform.position;
+            bullet.transform.localPosition = new Vector3(playerPos.x, playerPos.y, playerPos.z + 3); 
+            
+            bulletRigidBody.AddForce(playerModel.forward * 2000f);
+        }
     }
 
     void LocalMove(float x, float y, float speed)
