@@ -20045,7 +20045,7 @@ GameObject:
   - component: {fileID: 685171728}
   - component: {fileID: 685171729}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: TargetingReticule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20494,7 +20494,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 7e-45, z: 4.29e-43, w: 6e-44}
+  m_BoundingSphereOverride: {x: -0.04296875, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -34939,6 +34939,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 5071636979767105877, guid: da15c46bd61c99f498801bd72fb3cdbd,
     type: 3}
   BulletHolder: {fileID: 1149739487}
+  Reticule: {fileID: 685171727}
 --- !u!65 &959202327
 BoxCollider:
   m_ObjectHideFlags: 0
